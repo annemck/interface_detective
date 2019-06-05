@@ -1,8 +1,7 @@
 package weapons.knives;
 
-import weapons.Weapon;
 
-public class SwitchBlade extends Weapon implements ICut {
+public class SwitchBlade extends Blade {
 
     public SwitchBlade(int damage) {
         super(damage);
