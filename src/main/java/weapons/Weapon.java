@@ -12,5 +12,4 @@ public abstract class Weapon implements IAttack {
         return attackDamage;
     }
 
-    public abstract String attack();
 }

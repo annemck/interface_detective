@@ -44,4 +44,9 @@ public class SuspectTest {
         assertEquals("Stabby stab!", suspect.attack(detective));
         assertEquals(85, detective.getHealth());
     }
+
+    @Test
+    public void canHaveAnyWeapon() {
+
+    }
 }
