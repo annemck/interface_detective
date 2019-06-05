@@ -1,6 +1,8 @@
 import people.Detective;
 import people.Suspect;
+import weapons.guns.MachineGun;
 import weapons.guns.Revolver;
+import weapons.knives.Dagger;
 import weapons.knives.SwitchBlade;
 import org.junit.Before;
 import org.junit.Test;
@@ -66,5 +68,25 @@ public class DetectiveTest {
         Suspect innocent = new Suspect("Mary", 10, gun, false);
         assertEquals("Bang bang! Well, this'll be a lotta paperwork.", detective.attack(innocent));
         assertEquals(0, innocent.getHealth());
+    }
+
+    @Test
+    public void canHaveMachineGunAsWeapon() {
+        MachineGun gun = new MachineGun(4);
+        detective = new Detective("Bob", 50, gun);
+        assertEquals(gun, detective.getWeapon());
+    }
+
+    @Test
+    public void canHaveDaggerAsWeapon() {
+        Dagger dagger = new Dagger(4);
+        detective = new Detective("Bob", 50, dagger);
+        assertEquals(dagger, detective.getWeapon());
+    }
+
+    @Test
+    public void canHaveSwitchBladeAsWeapon() {
+        detective = new Detective("Bob", 50, blade);
+        assertEquals(blade, detective.getWeapon());
     }
 }
